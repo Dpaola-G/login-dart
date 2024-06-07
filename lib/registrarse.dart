@@ -1,69 +1,74 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Remember.dart';
 
 class RegistrarseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text('Registrarse'),
+        backgroundColor:
+            Color.fromARGB(0, 89, 18, 18), // Hace que el AppBar sea transparente
+// Elimina la sombra del AppBar
+        title: Text('Formulario de Registro'), // Título del AppBar
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+                    children: [
+            Text(
+              'Registro de Usuario',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             const TextField(
               decoration: InputDecoration(
-                labelText: 'Nombre Completo', // Etiqueta para el campo de usuario
-                border: OutlineInputBorder(), // Borde del campo
+                labelText: 'Nombre Completo',
+                border: OutlineInputBorder(),
               ),
             ),
-
-            const SizedBox(
-              height: 20,),
-             const TextField(
+            SizedBox(height: 20),
+            const TextField(
               decoration: InputDecoration(
-                labelText: 'Nombre de usuario', // Etiqueta para el campo de usuario
-                border: OutlineInputBorder(), // Borde del campo
+                labelText: 'Nombre de usuario',
+                border: OutlineInputBorder(),
               ),
             ),
-
-                        const SizedBox(
-              height: 20,),
-             const TextField(
+            SizedBox(height: 20),
+            const TextField(
               decoration: InputDecoration(
-                labelText: 'Password', // Etiqueta para el campo de usuario
-                border: OutlineInputBorder(), // Borde del campo
+                labelText: 'Password',
+                border: OutlineInputBorder(),
               ),
             ),
-              const SizedBox(
-              height: 20,),
-             const TextField(
+            SizedBox(height: 20),
+            const TextField(
               decoration: InputDecoration(
-                labelText: 'Confirmar Password', // Etiqueta para el campo de usuario
-                border: OutlineInputBorder(), // Borde del campo
+                labelText: 'Confirmar Password',
+                border: OutlineInputBorder(),
               ),
             ),
-              const SizedBox(
-              height: 20,),
-             const TextField(
+            SizedBox(height: 20),
+            const TextField(
               decoration: InputDecoration(
-                labelText: 'Email', // Etiqueta para el campo de usuario
-                border: OutlineInputBorder(), // Borde del campo
+                labelText: 'Email',
+                border: OutlineInputBorder(),
               ),
             ),
-                        const SizedBox(
-              height: 20,),
-             const TextField(
+            SizedBox(height: 20),
+            const TextField(
               decoration: InputDecoration(
-                labelText: 'Telefono', // Etiqueta para el campo de usuario
-                border: OutlineInputBorder(), // Borde del campo
+                labelText: 'Telefono',
+                border: OutlineInputBorder(),
               ),
             ),
+            SizedBox(height: 20),
+            RememberMeCheckbox(),
           ],
-
-          
-    ),
+        ),
       ),
     );
   }
